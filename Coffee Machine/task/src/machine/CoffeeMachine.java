@@ -1,12 +1,13 @@
 package machine;
 
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
 public class CoffeeMachine {
-    static Scanner scanner = new Scanner(System.in);
+    final static Scanner scanner = new Scanner(System.in);
 
     static int availableWaterAmount = 0;
     static int availableMilkAmount = 0;
