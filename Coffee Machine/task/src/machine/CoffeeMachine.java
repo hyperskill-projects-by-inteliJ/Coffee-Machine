@@ -7,11 +7,11 @@ public class CoffeeMachine {
     final static Scanner scanner = new Scanner(System.in);
 
     // available ingredients
-    static int availableWaterAmount = 0;
-    static int availableMilkAmount = 0;
-    static int availableCoffeeBeansAmount = 0;
-    static int availableDisposableCups = 0;
-    static int availableMoney = 0;
+    static int availableWaterAmount = 400;
+    static int availableMilkAmount = 540;
+    static int availableCoffeeBeansAmount = 120;
+    static int availableDisposableCups = 9;
+    static int availableMoney = 550;
 
 
     static int availableCupCount = 0;
@@ -96,6 +96,8 @@ public class CoffeeMachine {
                 makeCoffee(cappuccinoWaterAmountPerCup, cappuccinoMilkAmountPerCup, cappuccinoCoffeeBeansAmountPerCup, cappuccinoValue);
                 break;
         }
+
+        System.out.println();
     }
 
     public static void makeCoffee(int water, int milk, int coffeeBeans, int value) {
@@ -126,7 +128,9 @@ public class CoffeeMachine {
     }
 
     public static void take() {
-        System.out.printf("I gave you $%d", availableMoney);
+        System.out.printf("I gave you $%d\n", availableMoney);
+        availableMoney = 0;
+        System.out.println();
     }
 
     /*public static int calculateAvailableCupCount() {
@@ -153,11 +157,12 @@ public class CoffeeMachine {
 
     public static void printMachineStats() {
         System.out.println("The coffee machine has:");
-        System.out.printf("%d ml of water", availableWaterAmount);
-        System.out.printf("%d ml of milk", availableMilkAmount);
-        System.out.printf("%d g of coffee beans", availableCoffeeBeansAmount);
-        System.out.printf("%d disposable cups", availableDisposableCups);
-        System.out.printf("$%d of money", availableMoney);
+        System.out.printf("%d ml of water\n", availableWaterAmount);
+        System.out.printf("%d ml of milk\n", availableMilkAmount);
+        System.out.printf("%d g of coffee beans\n", availableCoffeeBeansAmount);
+        System.out.printf("%d disposable cups\n", availableDisposableCups);
+        System.out.printf("$%d of money\n", availableMoney);
+        System.out.println();
     }
 
     /*public static void printTotalIngredientsAmount(int cups) {
