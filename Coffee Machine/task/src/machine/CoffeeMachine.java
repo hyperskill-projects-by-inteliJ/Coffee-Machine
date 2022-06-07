@@ -35,7 +35,7 @@ public class CoffeeMachine {
     }
 
     public static void processCoffeeMachine() {
-        printMachineStats();
+        remainingResources();
 
         String action = selectAction();
         switch (action) {
@@ -50,7 +50,7 @@ public class CoffeeMachine {
                 break;
         }
 
-        printMachineStats();
+        remainingResources();
 
     }
 
@@ -109,7 +109,7 @@ public class CoffeeMachine {
         System.out.println();
     }
 
-    public static void printMachineStats() {
+    public static void remainingResources() {
         System.out.println("The coffee machine has:");
         System.out.printf("%d ml of water\n", availableWaterAmount);
         System.out.printf("%d ml of milk\n", availableMilkAmount);
