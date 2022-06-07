@@ -36,13 +36,30 @@ public class CoffeeMachine {
     static int cappuccinoValue = 6;
 
     public static void main(String[] args) {
-        // startCoffeeMachine();
+        startCoffeeMachine();
 
         // printTotalIngredientsAmount(requestedCupCount);
     }
 
     public static void startCoffeeMachine() {
-        System.out.println("Write how many ml of water the coffee machine has: ");
+        printMachineStats();
+
+        String action = selectAction();
+        switch (action) {
+            case "buy":
+                buy();
+                break;
+            case "fill":
+                fill();
+                break;
+            case "take":
+                take();
+                break;
+        }
+
+        printMachineStats();
+
+        /*System.out.println("Write how many ml of water the coffee machine has: ");
         availableWaterAmount = scanner.nextInt();
         System.out.println("Write how many ml of milk the coffee machine has:");
         availableMilkAmount = scanner.nextInt();
@@ -54,7 +71,8 @@ public class CoffeeMachine {
         System.out.println("Write how many cups of coffee you will need:");
         requestedCupCount = scanner.nextInt();
 
-        printState();
+        printState();*/
+
     }
 
 
