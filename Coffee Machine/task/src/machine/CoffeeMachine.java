@@ -44,6 +44,12 @@ public class CoffeeMachine {
         printState();
     }
 
+
+    public static String selectAction() {
+        System.out.println("Write action (buy, fill, take):");
+        return scanner.nextLine();
+    }
+
     public static int calculateAvailableCupCount() {
         List<Integer> ingredientsServingsCountList = new ArrayList();
         ingredientsServingsCountList.add(availableWaterAmount / waterAmountPerCup);
