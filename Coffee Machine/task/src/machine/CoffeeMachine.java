@@ -35,7 +35,6 @@ public class CoffeeMachine {
     }
 
     public static void processCoffeeMachine() {
-        remainingResources();
 
         String action = selectAction();
         switch (action) {
@@ -48,9 +47,14 @@ public class CoffeeMachine {
             case "take":
                 take();
                 break;
+            case "remaining":
+                remainingResources();
+                break;
+            case "exit":
+                exit();
+                break;
         }
 
-        remainingResources();
 
     }
 
