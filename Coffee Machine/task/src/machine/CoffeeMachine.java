@@ -12,9 +12,6 @@ public class CoffeeMachine {
     static int availableDisposableCups = 9;
     static int availableMoney = 550;
 
-    static int availableCupCount = 0;
-    static int requestedCupCount = 0;
-
     // espresso
     static int espressoWaterAmountPerCup = 250;
     static int espressoMilkAmountPerCup = 0;
@@ -110,20 +107,6 @@ public class CoffeeMachine {
         System.out.printf("I gave you $%d\n", availableMoney);
         availableMoney = 0;
         System.out.println();
-    }
-
-    public static void printState() {
-        StringBuilder sb = new StringBuilder();
-
-        if (requestedCupCount == availableCupCount) {
-            sb.append("Yes, I can make that amount of coffee");
-        } else if (requestedCupCount < availableCupCount) {
-            sb.append("Yes, I can make that amount of coffee (and even ").append(availableCupCount - requestedCupCount).append(" more than that)");
-        } else {
-            sb.append("No, I can make only ").append(availableCupCount).append("cup(s) of coffee");
-        }
-
-        System.out.println(sb);
     }
 
     public static void printMachineStats() {
