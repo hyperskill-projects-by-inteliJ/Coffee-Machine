@@ -125,4 +125,8 @@ public class CoffeeMachine {
         System.out.println();
     }
 
+    public static void exit() {
+        machineOn = false;
+    }
+
 }
