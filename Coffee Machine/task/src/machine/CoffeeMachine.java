@@ -49,7 +49,7 @@ public class CoffeeMachine {
         System.out.println("Write how many grams of coffee beans the coffee machine has:");
         availableCoffeeBeansAmount = scanner.nextInt();
 
-        availableCupCount = calculateAvailableCupCount();
+        // availableCupCount = calculateAvailableCupCount();
 
         System.out.println("Write how many cups of coffee you will need:");
         requestedCupCount = scanner.nextInt();
@@ -88,13 +88,13 @@ public class CoffeeMachine {
         availableMoney += value;
     }
 
-    public static int calculateAvailableCupCount() {
+    /*public static int calculateAvailableCupCount() {
         List<Integer> ingredientsServingsCountList = new ArrayList();
         ingredientsServingsCountList.add(availableWaterAmount / waterAmountPerCup);
         ingredientsServingsCountList.add(availableMilkAmount / milkAmountPerCup);
         ingredientsServingsCountList.add(availableCoffeeBeansAmount / coffeeBeansAmountPerCup);
         return Collections.min(ingredientsServingsCountList);
-    }
+    }*/
 
     public static void printState() {
         StringBuilder sb = new StringBuilder();
