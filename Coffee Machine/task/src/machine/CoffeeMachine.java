@@ -5,23 +5,34 @@ import java.util.Scanner;
 public class CoffeeMachine {
     static Scanner scanner = new Scanner(System.in);
 
-    
+    static int availableWaterAmount = 0;
+    static int availableMilkAmount = 0;
+    static int availableCoffeeBeansAmount = 0;
 
-    static int cupCount = 0;
+    static int availableCupCount = 0;
+    static int requestedCupCount = 0;
 
     static int waterAmountPerCup = 200;
     static int milkAmountPerCup = 50;
     static int coffeeBeansAmount = 15;
 
     public static void main(String[] args) {
-        System.out.println("Write how many cups of coffee you will need:");
-        cupCount = scanner.nextInt();
+        startCoffeeMachine();
 
-        printTotalIngredientsAmount(cupCount);
+        // printTotalIngredientsAmount(requestedCupCount);
     }
 
     public static void startCoffeeMachine() {
+        System.out.println("Write how many ml of water the coffee machine has: ");
+        availableWaterAmount = scanner.nextInt();
+        System.out.println("Write how many ml of milk the coffee machine has:");
+        availableMilkAmount = scanner.nextInt();
+        System.out.println("Write how many grams of coffee beans the coffee machine has:");
+        availableCoffeeBeansAmount = scanner.nextInt();
 
+
+        System.out.println("Write how many cups of coffee you will need:");
+        requestedCupCount = scanner.nextInt();
     }
 
     public static void printTotalIngredientsAmount(int cups) {
