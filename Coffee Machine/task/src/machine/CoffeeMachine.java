@@ -107,6 +107,10 @@ public class CoffeeMachine {
         availableDisposableCups += cups;
     }
 
+    public static void take() {
+        System.out.printf("I gave you $%d", availableMoney);
+    }
+
     /*public static int calculateAvailableCupCount() {
         List<Integer> ingredientsServingsCountList = new ArrayList();
         ingredientsServingsCountList.add(availableWaterAmount / waterAmountPerCup);
