@@ -1,6 +1,5 @@
 package machine;
 
-import java.lang.reflect.Field;
 import java.util.*;
 
 public class CoffeeMachine {
@@ -12,7 +11,6 @@ public class CoffeeMachine {
     static int availableCoffeeBeansAmount = 120;
     static int availableDisposableCups = 9;
     static int availableMoney = 550;
-
 
     static int availableCupCount = 0;
     static int requestedCupCount = 0;
@@ -82,8 +80,7 @@ public class CoffeeMachine {
     }
 
     public static void buy() {
-        System.out.println("What do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino:");
-        int coffeeType = scanner.nextInt();
+        int coffeeType = getIntegerInput("What do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino:");
 
         switch (coffeeType) {
             case 1:
@@ -109,22 +106,20 @@ public class CoffeeMachine {
     }
 
     public static void fill() {
-        System.out.println("Write how many ml of water you want to add:");
-        int water = scanner.nextInt();
-
-        System.out.println("Write how many ml of milk you want to add:");
-        int milk = scanner.nextInt();
-
-        System.out.println("Write how many grams of coffee beans you want to add:");
-        int coffeeBeans = scanner.nextInt();
-
-        System.out.println("Write how many disposable cups of coffee you want to add:");
-        int cups = scanner.nextInt();
+        int water = getIntegerInput("Write how many ml of water you want to add:");
+        int milk = getIntegerInput("Write how many ml of milk you want to add:");
+        int coffeeBeans = getIntegerInput("Write how many grams of coffee beans you want to add:");
+        int cups = getIntegerInput("Write how many disposable cups of coffee you want to add:");
 
         availableWaterAmount += water;
         availableMilkAmount += milk;
         availableCoffeeBeansAmount += coffeeBeans;
         availableDisposableCups += cups;
+    }
+
+    public static int getIntegerInput(String text) {
+        System.out.println(text);
+        return scanner.nextInt();
     }
 
     public static void take() {
