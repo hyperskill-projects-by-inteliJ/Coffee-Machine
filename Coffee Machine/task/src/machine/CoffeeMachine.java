@@ -11,6 +11,8 @@ public class CoffeeMachine {
     static int availableWaterAmount = 0;
     static int availableMilkAmount = 0;
     static int availableCoffeeBeansAmount = 0;
+    static int availableDisposableCups = 0;
+    static int availableMoney = 0;
 
     static int availableCupCount = 0;
     static int requestedCupCount = 0;
@@ -61,6 +63,15 @@ public class CoffeeMachine {
         }
 
         System.out.println(sb);
+    }
+
+    public static void printMachineStats() {
+        System.out.println("The coffee machine has:");
+        System.out.printf("%d ml of water", availableWaterAmount);
+        System.out.printf("%d ml of milk", availableMilkAmount);
+        System.out.printf("%d g of coffee beans", availableCoffeeBeansAmount);
+        System.out.printf("%d disposable cups", availableDisposableCups);
+        System.out.printf("$%d of money", availableMoney);
     }
 
     public static void printTotalIngredientsAmount(int cups) {
