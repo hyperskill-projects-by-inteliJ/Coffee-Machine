@@ -30,8 +30,12 @@ public class CoffeeMachine {
     static int cappuccinoCoffeeBeansAmountPerCup = 12;
     static int cappuccinoValue = 6;
 
+    static boolean machineOn = true;
+
     public static void main(String[] args) {
-        processCoffeeMachine();
+        while (machineOn) {
+            processCoffeeMachine();
+        }
     }
 
     public static void processCoffeeMachine() {
@@ -54,8 +58,6 @@ public class CoffeeMachine {
                 exit();
                 break;
         }
-
-
     }
 
 
