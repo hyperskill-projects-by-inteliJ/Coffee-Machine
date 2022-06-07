@@ -38,7 +38,7 @@ public class CoffeeMachine {
         System.out.println("Write how many cups of coffee you will need:");
         requestedCupCount = scanner.nextInt();
 
-
+        printState();
     }
 
     public static int calculateAvailableCupCount() {
@@ -48,6 +48,20 @@ public class CoffeeMachine {
         ingredientsServingsCountList.set(2, availableCoffeeBeansAmount / coffeeBeansAmountPerCup);
 
         return Collections.min(ingredientsServingsCountList);
+    }
+
+    public static void printState() {
+        StringBuilder sb = new StringBuilder();
+
+        if (requestedCupCount == availableCupCount) {
+            sb.append("Yes, I can make that amount of coffee");
+        } else if (requestedCupCount > availableCupCount) {
+            sb.append("Yes, I can make that amount of coffee (and even ").append(availableCupCount).append(" more than that)");
+        } else {
+            sb.append("No, I can make only ").append(availableCupCount).append("cup(s) of coffee");
+        }
+
+        System.out.println(sb);
     }
 
     public static void printTotalIngredientsAmount(int cups) {
