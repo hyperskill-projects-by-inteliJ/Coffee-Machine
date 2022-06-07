@@ -35,8 +35,6 @@ public class CoffeeMachine {
 
     public static void main(String[] args) {
         startCoffeeMachine();
-
-        // printTotalIngredientsAmount(requestedCupCount);
     }
 
     public static void startCoffeeMachine() {
@@ -56,20 +54,6 @@ public class CoffeeMachine {
         }
 
         printMachineStats();
-
-        /*System.out.println("Write how many ml of water the coffee machine has: ");
-        availableWaterAmount = scanner.nextInt();
-        System.out.println("Write how many ml of milk the coffee machine has:");
-        availableMilkAmount = scanner.nextInt();
-        System.out.println("Write how many grams of coffee beans the coffee machine has:");
-        availableCoffeeBeansAmount = scanner.nextInt();
-
-        // availableCupCount = calculateAvailableCupCount();
-
-        System.out.println("Write how many cups of coffee you will need:");
-        requestedCupCount = scanner.nextInt();
-
-        printState();*/
 
     }
 
@@ -128,14 +112,6 @@ public class CoffeeMachine {
         System.out.println();
     }
 
-    /*public static int calculateAvailableCupCount() {
-        List<Integer> ingredientsServingsCountList = new ArrayList();
-        ingredientsServingsCountList.add(availableWaterAmount / waterAmountPerCup);
-        ingredientsServingsCountList.add(availableMilkAmount / milkAmountPerCup);
-        ingredientsServingsCountList.add(availableCoffeeBeansAmount / coffeeBeansAmountPerCup);
-        return Collections.min(ingredientsServingsCountList);
-    }*/
-
     public static void printState() {
         StringBuilder sb = new StringBuilder();
 
@@ -160,10 +136,4 @@ public class CoffeeMachine {
         System.out.println();
     }
 
-    /*public static void printTotalIngredientsAmount(int cups) {
-        System.out.printf("For %d cups of coffee you will need:\n", cups);
-        System.out.printf("%d ml of water\n", cups * waterAmountPerCup);
-        System.out.printf("%d ml of milk\n", cups * milkAmountPerCup);
-        System.out.printf("%d g of coffee beans", cups * coffeeBeansAmountPerCup);
-    }*/
 }
