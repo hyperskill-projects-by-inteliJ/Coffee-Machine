@@ -31,10 +31,10 @@ public class CoffeeMachine {
     static int cappuccinoValue = 6;
 
     public static void main(String[] args) {
-        startCoffeeMachine();
+        processCoffeeMachine();
     }
 
-    public static void startCoffeeMachine() {
+    public static void processCoffeeMachine() {
         printMachineStats();
 
         String action = selectAction();
