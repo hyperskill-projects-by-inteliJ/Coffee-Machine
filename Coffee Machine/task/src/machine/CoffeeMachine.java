@@ -43,10 +43,9 @@ public class CoffeeMachine {
 
     public static int calculateAvailableCupCount() {
         List<Integer> ingredientsServingsCountList = new ArrayList();
-        ingredientsServingsCountList.set(0, availableWaterAmount / waterAmountPerCup);
-        ingredientsServingsCountList.set(1, availableMilkAmount / milkAmountPerCup);
-        ingredientsServingsCountList.set(2, availableCoffeeBeansAmount / coffeeBeansAmountPerCup);
-
+        ingredientsServingsCountList.add(availableWaterAmount / waterAmountPerCup);
+        ingredientsServingsCountList.add(availableMilkAmount / milkAmountPerCup);
+        ingredientsServingsCountList.add(availableCoffeeBeansAmount / coffeeBeansAmountPerCup);
         return Collections.min(ingredientsServingsCountList);
     }
 
@@ -55,8 +54,8 @@ public class CoffeeMachine {
 
         if (requestedCupCount == availableCupCount) {
             sb.append("Yes, I can make that amount of coffee");
-        } else if (requestedCupCount > availableCupCount) {
-            sb.append("Yes, I can make that amount of coffee (and even ").append(availableCupCount).append(" more than that)");
+        } else if (requestedCupCount < availableCupCount) {
+            sb.append("Yes, I can make that amount of coffee (and even ").append(availableCupCount - requestedCupCount).append(" more than that)");
         } else {
             sb.append("No, I can make only ").append(availableCupCount).append("cup(s) of coffee");
         }
