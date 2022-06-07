@@ -69,12 +69,23 @@ public class CoffeeMachine {
 
         switch (coffeeType) {
             case 1:
+                makeCoffee(espressoWaterAmountPerCup, espressoMilkAmountPerCup, espressoCoffeeBeansAmountPerCup, espressoValue);
                 break;
             case 2:
+                makeCoffee(latteWaterAmountPerCup, latteMilkAmountPerCup, latteCoffeeBeansAmountPerCup, latteValue);
                 break;
             case 3:
+                makeCoffee(cappuccinoWaterAmountPerCup, cappuccinoMilkAmountPerCup, cappuccinoCoffeeBeansAmountPerCup, cappuccinoValue);
                 break;
         }
+    }
+
+    public static void makeCoffee(int water, int milk, int coffeeBeans, int value) {
+        availableWaterAmount -= water;
+        availableMilkAmount -= milk;
+        availableCoffeeBeansAmount -= coffeeBeans;
+        availableDisposableCups--;
+        availableMoney += value;
     }
 
     public static int calculateAvailableCupCount() {
