@@ -88,6 +88,25 @@ public class CoffeeMachine {
         availableMoney += value;
     }
 
+    public static void fill() {
+        System.out.println("Write how many ml of water you want to add:");
+        int water = scanner.nextInt();
+
+        System.out.println("Write how many ml of milk you want to add:");
+        int milk = scanner.nextInt();
+
+        System.out.println("Write how many grams of coffee beans you want to add:");
+        int coffeeBeans = scanner.nextInt();
+
+        System.out.println("Write how many disposable cups of coffee you want to add:");
+        int cups = scanner.nextInt();
+
+        availableWaterAmount += water;
+        availableMilkAmount += milk;
+        availableCoffeeBeansAmount += coffeeBeans;
+        availableDisposableCups += cups;
+    }
+
     /*public static int calculateAvailableCupCount() {
         List<Integer> ingredientsServingsCountList = new ArrayList();
         ingredientsServingsCountList.add(availableWaterAmount / waterAmountPerCup);
