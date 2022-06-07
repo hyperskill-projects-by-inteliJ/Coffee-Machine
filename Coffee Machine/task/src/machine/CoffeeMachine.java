@@ -88,11 +88,26 @@ public class CoffeeMachine {
     }
 
     public static void makeCoffee(int water, int milk, int coffeeBeans, int value) {
-        availableWaterAmount -= water;
-        availableMilkAmount -= milk;
-        availableCoffeeBeansAmount -= coffeeBeans;
-        availableDisposableCups--;
-        availableMoney += value;
+        String status = "";
+
+        if (water <= availableWaterAmount && milk <= availableMilkAmount && coffeeBeans <= availableMilkAmount && availableDisposableCups > 0) {
+            status = "I have enough resources, making you a coffee!";
+            availableWaterAmount -= water;
+            availableMilkAmount -= milk;
+            availableCoffeeBeansAmount -= coffeeBeans;
+            availableDisposableCups--;
+            availableMoney += value;
+        } else if (water > availableWaterAmount) {
+            System.out.println("Sorry, not enough water!");
+        } else if (milk > availableMilkAmount) {
+            System.out.println("Sorry, not enough milk!");
+        } else if (coffeeBeans > availableCoffeeBeansAmount) {
+            System.out.println("Sorry, not enough coffee beans!");
+        } else if (availableDisposableCups < 1) {
+            System.out.println("Sorry, not enough disposable cups!");
+        }
+
+        System.out.println(status);
     }
 
     public static void fill() {
