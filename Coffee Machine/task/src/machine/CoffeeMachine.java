@@ -67,17 +67,20 @@ public class CoffeeMachine {
     }
 
     public static void buy() {
-        int coffeeType = getIntegerInput("What do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino:");
+        System.out.println("What do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino, back - to main menu:");
+        String coffeeType = scanner.nextLine();
 
         switch (coffeeType) {
-            case 1:
+            case "1":
                 makeCoffee(espressoWaterAmountPerCup, espressoMilkAmountPerCup, espressoCoffeeBeansAmountPerCup, espressoValue);
                 break;
-            case 2:
+            case "2":
                 makeCoffee(latteWaterAmountPerCup, latteMilkAmountPerCup, latteCoffeeBeansAmountPerCup, latteValue);
                 break;
-            case 3:
+            case "3":
                 makeCoffee(cappuccinoWaterAmountPerCup, cappuccinoMilkAmountPerCup, cappuccinoCoffeeBeansAmountPerCup, cappuccinoValue);
+                break;
+            case "back":
                 break;
         }
 
