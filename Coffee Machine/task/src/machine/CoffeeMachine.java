@@ -1,29 +1,42 @@
 package machine;
 
 import java.lang.reflect.Field;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class CoffeeMachine {
     final static Scanner scanner = new Scanner(System.in);
 
+    // available ingredients
     static int availableWaterAmount = 0;
     static int availableMilkAmount = 0;
     static int availableCoffeeBeansAmount = 0;
     static int availableDisposableCups = 0;
     static int availableMoney = 0;
 
+
     static int availableCupCount = 0;
     static int requestedCupCount = 0;
 
-    static int waterAmountPerCup = 200;
-    static int milkAmountPerCup = 50;
-    static int coffeeBeansAmountPerCup = 15;
+    // espresso
+    static int espressoWaterAmountPerCup = 250;
+    static int espressoMilkAmountPerCup = 0;
+    static int espressoCoffeeBeansAmountPerCup = 16;
+    static int espressoValue = 4;
+
+    // latte
+    static int latteWaterAmountPerCup = 350;
+    static int latteMilkAmountPerCup = 75;
+    static int latteCoffeeBeansAmountPerCup = 20;
+    static int latteValue = 7;
+
+    // cappuccino
+    static int cappuccinoWaterAmountPerCup = 200;
+    static int cappuccinoMilkAmountPerCup = 100;
+    static int cappuccinoCoffeeBeansAmountPerCup = 12;
+    static int cappuccinoValue = 6;
 
     public static void main(String[] args) {
-        startCoffeeMachine();
+        // startCoffeeMachine();
 
         // printTotalIngredientsAmount(requestedCupCount);
     }
@@ -48,6 +61,20 @@ public class CoffeeMachine {
     public static String selectAction() {
         System.out.println("Write action (buy, fill, take):");
         return scanner.nextLine();
+    }
+
+    public static void buy() {
+        System.out.println("What do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino:");
+        int coffeeType = scanner.nextInt();
+
+        switch (coffeeType) {
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+        }
     }
 
     public static int calculateAvailableCupCount() {
