@@ -60,7 +60,6 @@ public class CoffeeMachine {
         }
     }
 
-
     public static String selectAction() {
         System.out.println("Write action (buy, fill, take, remaining, exit):");
         return scanner.nextLine();
