@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="CoffeeMachineTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-06-07T14:18:44" hostname="MRR-PC" time="0.114">
+<testsuite name="CoffeeMachineTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-06-07T14:27:23" hostname="MRR-PC" time="0.108">
   <properties/>
-  <testcase name="start" classname="CoffeeMachineTest" time="0.114"/>
+  <testcase name="start" classname="CoffeeMachineTest" time="0.108"/>
   <system-out><![CDATA[?[1;31m
 Start test 1?[0m
 The coffee machine has:
