@@ -142,10 +142,10 @@ public class CoffeeMachine {
         System.out.printf("$%d of money", availableMoney);
     }
 
-    public static void printTotalIngredientsAmount(int cups) {
+    /*public static void printTotalIngredientsAmount(int cups) {
         System.out.printf("For %d cups of coffee you will need:\n", cups);
         System.out.printf("%d ml of water\n", cups * waterAmountPerCup);
         System.out.printf("%d ml of milk\n", cups * milkAmountPerCup);
         System.out.printf("%d g of coffee beans", cups * coffeeBeansAmountPerCup);
-    }
+    }*/
 }
