@@ -3,7 +3,7 @@ hyperskill_project:
   ide_files: https://stepik.org/media/attachments/lesson/204875/additional_files.json
   is_template_based: false
   use_ide: true
-update_date: Sat, 04 Jun 2022 18:25:58 UTC
+update_date: Tue, 07 Jun 2022 18:24:43 UTC
 stages:
 - id: 175
   step: 5329
@@ -125,10 +125,10 @@ topics:
     theory_id: 3614
   - title: Defining classes
     theory_id: 3618
-  - title: Instance methods
-    theory_id: 3495
   - title: Constructor
     theory_id: 3535
+  - title: Instance methods
+    theory_id: 3495
   - title: Objects
     theory_id: 4727
   - title: Static members
